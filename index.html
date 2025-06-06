@@ -20,19 +20,22 @@
             min-height: 100vh;
         }
 
-        .accordion {
-            margin: 50px 0;
+        .accordion-item {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
         }
 
         .accordion-header {
             background-color: #f8f9fa;
-            border: 1px solid #ddd;
             padding: 15px 20px;
             cursor: pointer;
             font-size: 1.2rem;
             font-weight: bold;
             color: #333;
             transition: background-color 0.3s ease;
+            border: none;
         }
 
         .accordion-header:hover {
@@ -43,13 +46,10 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            border-left: 1px solid #ddd;
-            border-right: 1px solid #ddd;
         }
 
         .accordion-content.active {
             max-height: 200px;
-            border-bottom: 1px solid #ddd;
         }
 
         .accordion-text {
@@ -58,6 +58,7 @@
             line-height: 1.6;
             color: #333;
             font-weight: bold;
+            background-color: white;
         }
 
         /* Mobile responsiveness */
@@ -91,22 +92,100 @@
     </style>
 </head>
 <body>
+<h1>பாடல்</h1>
     <div class="accordion">
-        <div class="accordion-header" onclick="toggleAccordion()">
-            மாரிநாட் கூவுங் குயிலின் குரலின்னா
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion('accordion1')">
+                மாரிநாட் கூவுங் குயிலின் குரலின்னா
+            </div>
+            <div class="accordion-content" id="accordion1">
+                <div class="accordion-text">
+                    மாரி நாள் கூவும் குயிலின் குரல் இன்னா;
+                </div>
+            </div>
         </div>
-        <div class="accordion-content" id="accordion-content">
-            <div class="accordion-text">
-                வீர மிலாளர் கடுமொழிக் கூற்றின்னா<br>
-                மாரி வளம்பொய்ப்பி னூர்க்கின்னா<br>
-                வாங்கின்னாமூரி யெருத்தா லுழவு
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion('accordion2')">
+                வீர மிலாளர் கடுமொழிக் கூற்றின்னா
+            </div>
+            <div class="accordion-content" id="accordion2">
+                <div class="accordion-text">
+                    வீரம் இலாளர் கடு மொழிக் கூற்று இன்னா;
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion('accordion3')">
+                மாரி வளம்பொய்ப்பி னூர்க்கின்னா வாங்கின்னா
+            </div>
+            <div class="accordion-content" id="accordion3">
+                <div class="accordion-text">
+                    மாரி வளம் பொய்ப்பின், ஊர்க்கு இன்னா; ஆங்கு இன்னா
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion('accordion4')">
+                மூரி யெருத்தா லுழவு
+            </div>
+            <div class="accordion-content" id="accordion4">
+                <div class="accordion-text">
+                    மூரி எருத்தால் உழவு.
+                </div>
             </div>
         </div>
     </div>
 
+<br>
+<br>
+<h3>விளக்கம்</h3>
+<br>
+<div class="definitions">
+        <div class="definition-item">
+            <span class="term">1. மாரி நாள்</span> - <span class="meaning">மழைக்காலத்தில்</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">2. கூவும்</span> - <span class="meaning">கூவுகின்ற</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">3. குயிலின் குரல்</span> - <span class="meaning">குயிலினது குரலோசை</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">4. இன்னா</span> - <span class="meaning">துன்பமாம்</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">5. ஈரம இலாளர்</span> - <span class="meaning">அன்பில்லாதவரது, கடுமொழி கூற்று கடிதாகிய சொல்</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">6. மாரி வளம் பொய்ப்பின்</span> - <span class="meaning">மழை வளம் பொய்க்குமாயின்</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">7. ஊர்க்கு</span> - <span class="meaning">உலகிற்கு</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">8. ஆங்கு</span> - <span class="meaning">அவ்வாறே</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">9. மூரி எருத்தால்</span> - <span class="meaning">மூரியாகிய எருதால்</span>
+        </div>
+        <div class="definition-item">
+            <span class="term">10. உழவு</span> - <span class="meaning">உழுதல்</span>
+        </div>
+    </div>
+
+<br>
+<br>
+
+<h3>ChatGPT Paragraph</h3>
+<br>
+<p> வீரமிலாளர் என்று கொள்ளலும் ஆம். மொழிக்கூற்று : ஒருபொருளிருசொல்; மொழியின் பகுதியுமாம். மழையாகிய வளம் என்க; மழையினது வளம் எனலுமாம். பொய்த்தல் - இல்லையாதல்; ‘விண்ணின்று பொய்ப்பின்' என்பது திருக்குறள். ‘மாரி பொய்ப்பினும்' என்பது புறம். மூரி யெருத்து : இரு பெயரொட்டு. வலிமை மிக்க எருதுமாம். ‘எருமையு மெருதும் பெருமையுஞ் சோம்பும் வலியு முரணு நெரிவு மூரி என்பது பிங்கலம். கட்டுக் கடங்காத காளையால் உழுதல் துன்பம் என்பதாம் முதிர்ந்த எருதால் என்று பொருள் கூறுவாரு முளர். </p>
+
     <script>
-        function toggleAccordion() {
-            const content = document.getElementById('accordion-content');
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
             content.classList.toggle('active');
         }
     </script>
